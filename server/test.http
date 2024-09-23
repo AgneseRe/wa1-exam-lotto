@@ -1,0 +1,66 @@
+# This file can be used for testing API using REST Client
+
+## Execute Log In
+POST http://localhost:3001/api/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "username": "agnesere@gmail.com",
+    "password": "prova"
+}
+###
+
+## Checking if user is still logged-in.
+GET http://localhost:3001/api/sessions/current HTTP/1.1
+###
+
+## Execute Log Out.
+DELETE http://localhost:3001/api/sessions/current HTTP/1.1
+###
+
+## Create a new bet
+POST http://localhost:3001/api/submitBet HTTP/1.1
+content-Type: application/json
+
+{
+    "userId": 1,
+    "timestamp": "2024-09-15T14:24:11.423Z",
+    "number1": 10,
+    "number2": 45,
+    "number3": 87
+}
+###
+
+## Get current bet
+GET http://localhost:3001/api/currentBet/1 HTTP/1.1
+### 
+GET http://localhost:3001/api/currentBet/3 HTTP/1.1
+###
+
+## Get next draw time
+GET http://localhost:3001/api/nextDrawTime HTTP/1.1
+###
+
+## Get last draw
+GET http://localhost:3001/api/lastDraw HTTP/1.1
+###
+
+## Get earned points
+GET http://localhost:3001/api/earnedPoints/1/4 HTTP/1.1
+###
+
+## Get ranking list
+GET http://localhost:3001/api/rankingList HTTP/1.1
+###
+
+## Update user points
+PUT http://localhost:3001/api/updatePoints/1 HTTP/1.1
+content-type: application/json
+
+{
+    "pointsToDeductOrAdd": -90
+}
+###
+
+## Get user points
+GET http://localhost:3001/api/points/1 HTTP/1.1

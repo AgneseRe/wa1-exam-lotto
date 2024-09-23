@@ -1,0 +1,88 @@
+/* *** RulesComponent.css *** */
+
+/* *** Light and Dark Mode *** */
+.bold {
+    font-weight: bold;
+}
+
+.accordion-button:focus {
+    box-shadow: none;   /* rimozione ombra */
+}
+
+/* *** Light Mode (only) *** */
+
+.light {
+    background-color: #ffffff;
+    color: #282C34;
+    min-height: 100vh;
+}
+
+.light .table thead tr {
+    border-bottom: 2px solid #282C34;
+}
+
+.light .accordion-button {
+    color: #1C1C2B;
+}
+
+/* Cambia il colore di sfondo dell'header dell'accordion quando è attivo */
+.light .accordion-button:not(.collapsed) {
+    background-color: #BDC3C7;
+    color: #1C1C2B
+}
+
+.light .accordion-body {
+    background-color: #F2F2F2;
+}
+
+/* Dark Mode (only) */
+.dark {
+    background-color: #282C34;
+    color: #ffffff;
+    min-height: 100vh;
+}
+  
+.dark .accordion-button {
+    background-color: #282C34;
+    color: #ffffff;
+}
+
+.dark .accordion-button::after {
+    color: #ffffff;
+}
+
+.dark .accordion-button:not(.collapsed) {
+    background-color: #353B45;
+    color: #ffffff;
+}
+
+.dark .accordion-body {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+.dark .table {
+    background-color: #353B45;
+    color: #ffffff;
+}
+
+/* Intestazioni della tabella in modalità scura */
+.dark .table thead th {
+    background-color: #353B45; /* Colore di sfondo dell'intestazione */
+    color: #ffffff; /* Colore del testo dell'intestazione */
+}
+
+/* Righe della tabella in modalità scura */
+.dark .table tbody tr:nth-child(odd) {
+    background-color: #2c3034; /* Colore di sfondo per le righe dispari */
+}
+
+.dark .table tbody tr:nth-child(even) {
+    background-color: #212529; /* Colore di sfondo per le righe pari */
+}
+
+/* Colori dei bordi della tabella in modalità scura */
+.dark .table th, 
+.dark .table td {
+    border-color: #495057; /* Colore del bordo delle celle */
+}

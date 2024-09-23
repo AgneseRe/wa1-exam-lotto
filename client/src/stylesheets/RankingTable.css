@@ -1,0 +1,30 @@
+/* *** RankingTable.css *** */
+
+/* *** Light and Dark Mode *** */
+.ranking-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.gold {
+    color: #FFD700;
+}
+
+.silver {
+    color: #C0C0C0;
+}
+
+.bronze {
+    color: #CD7F32;
+}
+
+/* *** Light Mode (only) *** */
+.light .ranking-title {
+    color: #1C1C2B; /* Colore scuro per tema chiaro */
+}
+
+/* *** Dark Mode (only) *** */
+.dark .ranking-title {
+    color: #fff; /* Colore chiaro per tema scuro */
+}

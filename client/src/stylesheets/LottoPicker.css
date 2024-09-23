@@ -1,0 +1,137 @@
+/* *** LottoPicker.css *** */
+
+/* *** Light and Dark Mode *** */
+.bet-button {
+    border-radius: 10rem;
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Stile per il testo del countdown */
+.countdown-timer {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;  /* Spaziatura tra i caratteri */
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);  /* Effetto ombra */
+    text-align: center;
+    transition: transform 0.2s;  /* Animazione su hover */
+    background: linear-gradient(90deg, #ff5722, #f44336); /* Gradiente per il testo */
+    -webkit-background-clip: text;
+    -moz-background-clip: text; /* Supporto per Firefox */
+    background-clip: text;
+    color: transparent;
+    width: 90;
+}
+
+/* Effetto quando si passa sopra il countdown */
+.countdown-timer:hover {
+    transform: scale(1.05);  /* Leggera crescita quando si passa con il mouse */
+}
+
+.lotto-card {
+    background-color: #F2F2F2;
+    border: none;
+    box-shadow: 5px 1px 10px rgba(0, 0, 0, 0.2)
+}
+
+.lotto-grid {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 6px;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #198754;
+}
+
+.number.selected {
+    background-color: #198754;
+    border: none;
+    color: #FFFFFF;
+    transition: background-color 0.3s;
+}
+
+.row-estrazione {
+    border: 2px solid #BDC3C7;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.row-estrazione span {
+    font-weight: bold;
+    letter-spacing: 1.05px;
+}
+
+.row-punti, .row-vincita {
+    border: 2px solid #BDC3C7;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.row-regole {
+    border: 2px solid #BDC3C7;
+    text-align: center;
+    margin-bottom: 15px
+}
+
+.row-punti, .row-regole {
+    display: flex;
+    align-items: center;
+}
+
+.row-punti p {
+    margin: 0;
+    padding: 0;
+}
+
+.row-regole p {
+    margin: 0;
+    padding: 20px;
+}
+
+.punti {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.05px;
+}
+
+/* *** Light Mode (only) *** */
+.light .countdown-timer {
+    border: 3px solid #1C1C2B;
+}
+
+.light .row-estrazione span {
+    color: #1C1C2B;
+}
+
+.light .row-punti, .row-vincita {
+    background-color: #F2F2F2;
+    color: #1C1C2B;
+}
+
+/* *** Dark Mode (only) *** */
+.dark .countdown-timer {
+    border: 3px solid #F2F2F2;
+}
+
+.dark .row-estrazione span {
+    color: #FFFFFF;
+}
